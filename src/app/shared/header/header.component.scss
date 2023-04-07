@@ -1,0 +1,131 @@
+.main-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: var(--navbar-z-index);
+}
+
+.navbar {
+  position: relative;
+  border-bottom: 1px solid var(--color-surface-variant);
+  padding: 0 0.75rem 0 1.5rem;
+  background-color: var(--bg-color);
+  height: var(--navbar-height);
+  transition: color 0.5s, background-color 0.5s;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1376px;
+}
+
+.navbar-container__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbar-container__title {
+  display: flex;
+  align-items: center;
+  height: var(--navbar-height);
+  transition: opacity 0.25s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.flex-row {
+  display: flex;
+  height: var(--navbar-height);
+  align-items: center;
+}
+
+.navbar__hamburger-button {
+  width: 2.5rem;
+  height: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.navbar__hamburger-container {
+  position: relative;
+  width: 1rem;
+  height: 0.9rem;
+  overflow: hidden;
+}
+
+.navbar__hamburger-top,
+.navbar__hamburger-middle,
+.navbar__hamburger-bottom {
+  position: absolute;
+  width: 1rem;
+  height: 0.125rem;
+  transition: top 0.25s, background-color 0.5s, transform 0.5s;
+}
+
+.navbar__hamburger-top {
+  top: 0;
+  left: 0;
+  transform: translateX(0);
+}
+
+.navbar__hamburger-button:hover .navbar__hamburger-top {
+  top: 0;
+  left: 0;
+  transform: translateX(4px);
+}
+
+.navbar__hamburger-middle {
+  top: 6px;
+  left: 0;
+  transform: translateX(8px);
+}
+
+.navbar__hamburger-button:hover .navbar__hamburger-middle {
+  top: 6px;
+  left: 0;
+  transform: translateX(0);
+}
+
+.navbar__hamburger-bottom {
+  top: 12px;
+  left: 0;
+  transform: translate(4px);
+}
+
+.navbar__hamburger-button:hover .navbar__hamburger-bottom {
+  top: 12px;
+  left: 0;
+  transform: translateX(8px);
+}
+.main-nav {
+  display: none;
+}
+
+.main-nav__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+@media (min-width: 48rem) {
+  .main-header {
+    position: fixed;
+  }
+  .navbar__hamburger-button {
+    display: none;
+  }
+  .main-nav {
+    display: flex;
+  }
+}
