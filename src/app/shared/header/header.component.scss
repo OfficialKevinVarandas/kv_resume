@@ -9,7 +9,7 @@
   position: relative;
   border-bottom: 1px solid var(--color-surface-variant);
   padding: 0 0.75rem 0 1.5rem;
-  background-color: var(--bg-color);
+  background-color: var(--color-background);
   height: var(--navbar-height);
   transition: color 0.5s, background-color 0.5s;
 }
@@ -70,6 +70,7 @@
   width: 1rem;
   height: 0.125rem;
   transition: top 0.25s, background-color 0.5s, transform 0.5s;
+  background-color: var(--color-on-background);
 }
 
 .navbar__hamburger-top {
